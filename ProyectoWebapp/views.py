@@ -17,6 +17,3 @@ def tienda(request):
     
     return render(request, "ProyectoWebapp/tienda.html")
 
-def Contacto(request):
-    
-    return render(request, "ProyectoWebapp/contacto.html")
