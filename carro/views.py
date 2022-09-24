@@ -1,3 +1,4 @@
+from platform import processor
 from django.shortcuts import render,redirect
 from .carro import Carro
 from tienda.models import Productos
@@ -6,7 +7,7 @@ from tienda.models import Productos
 def agregar_producto(request, producto_id):
     carro = Carro(request)
     producto = Productos.objects.get(id = producto_id)
-    carro.agregar(producto =producto)
+    carro.agregar(producto = producto)
     return redirect("tienda")
 
 def eliminar_producto(request, producto_id):
